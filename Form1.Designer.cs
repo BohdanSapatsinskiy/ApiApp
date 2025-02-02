@@ -28,13 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.buttonStart = new System.Windows.Forms.Button();
+            this.textBoxOutput = new System.Windows.Forms.TextBox();
+            this.SuspendLayout();
+            // 
+            // buttonStart
+            // 
+            this.buttonStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonStart.Location = new System.Drawing.Point(12, 12);
+            this.buttonStart.Name = "buttonStart";
+            this.buttonStart.Size = new System.Drawing.Size(330, 57);
+            this.buttonStart.TabIndex = 0;
+            this.buttonStart.Text = "StartApi";
+            this.buttonStart.UseVisualStyleBackColor = true;
+            this.buttonStart.Click += new System.EventHandler(this.buttonStart_Click);
+            // 
+            // textBoxOutput
+            // 
+            this.textBoxOutput.AcceptsTab = true;
+            this.textBoxOutput.Location = new System.Drawing.Point(12, 75);
+            this.textBoxOutput.Multiline = true;
+            this.textBoxOutput.Name = "textBoxOutput";
+            this.textBoxOutput.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBoxOutput.Size = new System.Drawing.Size(776, 210);
+            this.textBoxOutput.TabIndex = 1;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(800, 300);
+            this.Controls.Add(this.textBoxOutput);
+            this.Controls.Add(this.buttonStart);
+            this.Name = "Form1";
+            this.Text = "ApiWorker";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button buttonStart;
+        private System.Windows.Forms.TextBox textBoxOutput;
     }
 }
 
